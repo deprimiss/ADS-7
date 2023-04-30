@@ -47,10 +47,9 @@ void TPQueue<T>::push(const T& n) {
         while (cur) {
             if (cur->value.prior < n.prior) {
                 break;
-            } else {
+            }
             cur = cur->next;
             i++;
-            }
         }
         if (i == 0) {
             Item* tmp = new Item;
@@ -59,7 +58,7 @@ void TPQueue<T>::push(const T& n) {
             head = tmp;
         } else {
             cur = head;
-            for (int i = 1; i < i; i++) {
+            for (int k = 1; k < i; k++) {
                 cur = cur->next;
             }
             Item* tmp = new Item;
