@@ -34,7 +34,7 @@ T TPQueue<T>::pop() {
         Item* tmp = head->next;
         delete head;
         head = tmp;
-        return tmp;
+        return n;
     }
 }
 
