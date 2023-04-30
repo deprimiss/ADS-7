@@ -28,8 +28,7 @@ template<typename T>
 T TPQueue<T>::pop() {
     if (head == nullptr) {
         throw std::string("Empty!");
-    }
-    else {
+    } else {
         T n  = head->value;
         Item* tmp = head->next;
         delete head;
@@ -42,8 +41,7 @@ template<typename T>
 void TPQueue<T>::push(const T& n) {
     if (head == nullptr) {
         head = create(n);
-    } 
-    else {
+    } else {
         Item* cur = head;
         int i = 0;
         while (cur) {
@@ -58,10 +56,9 @@ void TPQueue<T>::push(const T& n) {
             tmp->next = head;
             tmp->value = n;
             head = tmp;
-        }
-        else {
+        } else {
             cur = head;
-            for (int i = 0; i < i; i++) {
+            for (int i = 1; i < i; i++) {
                 cur = cur->next;
             }
             Item* tmp = new Item;
