@@ -22,6 +22,13 @@ class TPQueue {
     TPQueue() :head(nullptr) {}
     void push(const T&);
     T pop();
+    ~TPQueue() {
+            while (head) {
+                Item* tmp = head->next;
+                delete head;
+                head = tmp;
+            }
+        }
 };
 
 template<typename T>
